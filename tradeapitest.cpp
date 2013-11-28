@@ -7,11 +7,11 @@
 // 报单录入操作是否完成的标志
 // Create a manual reset event with no signal
 HANDLE g_hEvent = CreateEvent(NULL, true, false, NULL);
-// 会员代码
+// 会员代码 所有的类型定义TYPEDEF均在ThostFtdcUserApiDataType中
 TThostFtdcBrokerIDType g_chBrokerID;
 // 交易用户代码
 TThostFtdcUserIDType g_chUserID;
-class CSimpleHandler : public CThostFtdcTraderSpi
+class CSimpleHandler : public CThostFtdcTraderSpi //此类位于ThostFtdcTraderApi中
 {
 public:
 // 构造函数,需要一个有效的指向CThostFtdcMduserApi实例的指针
